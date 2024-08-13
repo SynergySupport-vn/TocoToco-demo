@@ -1,0 +1,33 @@
+@font-face {
+  font-family: Barlow;
+  src: url(../fonts/Barlow-Regular.ttf);
+}
+
+@font-face {
+  font-family: Baloo;
+  src: url(../fonts/Baloo-Regular.ttf);
+}
+
+@font-face {
+  font-family: BalooExtra;
+  src: url(../fonts/Baloo-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Muli;
+  src: url(../fonts/Mulish-Regular.ttf);
+}
+@font-face {
+  font-family: MuliExtra;
+  src: url(../fonts/Mulish-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Mono;
+  src: url(../fonts/roboto/RobotoMono-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Mono-Italic;
+  src: url(https://tocotocotea.com/wp-content/themes/tocotocotea/assets/fonts/roboto/RobotoMono-Italic-VariableFont_wght);
+}

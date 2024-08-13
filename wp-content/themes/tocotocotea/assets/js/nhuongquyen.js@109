@@ -1,0 +1,231 @@
+jQuery(function () {
+  //Tile effect for div
+  jQuery(".grid").masonry({
+    itemSelector: ".grid-item",
+    percentPosition: true,
+    columnWidth: ".grid-sizer",
+  });
+
+  //Tile effect for div
+  jQuery(".grid-brand").masonry({
+    itemSelector: ".grid-brand-item",
+    percentPosition: true,
+    columnWidth: ".grid-brand-sizer",
+  });
+
+  //Fill data to Register form
+  jQuery(".rpa-submit").on("click", function () {
+    jQuery("#txtPhone").val(jQuery(".rpa-phone").val());
+    document
+      .getElementById("frm-register")
+      .scrollIntoView({behavior: "smooth"});
+  });
+
+  activeList();
+
+  showDivs(slideIndex);
+
+  //Submit data to Google form
+  jQuery("#btnSlSubmit").click(function (event) {
+    event.preventDefault();
+
+    var input = [];
+    input.push(jQuery("#txtFullName"));
+    input.push(jQuery("#txtEmail"));
+    input.push(jQuery("#txtPhone"));
+    input.push(jQuery("#txtAddress"));
+    input.push(jQuery("#slcInvestment"));
+
+    saveInforNQ(
+      jQuery("#txtFullName").val(),
+      jQuery("#txtEmail").val(),
+      jQuery("#txtPhone").val(),
+      jQuery("#txtAddress").val(),
+      "TQ",
+      jQuery("#slcInvestment").val(),
+      input
+    );
+
+    // postCustomerToGoogle(
+    //   jQuery("#txtFullName").val(),
+    //   jQuery("#txtEmail").val(),
+    //   jQuery("#txtPhone").val(),
+    //   jQuery("#txtAddress").val(),
+    //   "TQ",
+    //   jQuery("#slcInvestment").val(),
+    //   jQuery("#keepToken").val(),
+    //   input
+    // );
+  });
+});
+
+var onloadCallback = function () {
+  grecaptcha.render("g-recaptcha-txt", {
+    sitekey: "6LcIuwQhAAAAAJPx7VhN7BFDYkqKkoUSS2STDJl4",
+    callback: enablebtnSubmit,
+    theme: "light",
+  });
+};
+
+var enablebtnSubmit = function (response) {
+  jQuery("#btnSlSubmit").removeClass("disabled");
+};
+
+function TestSubmitInfor() {
+  var input = [];
+  input.push(jQuery("#txtFullName"));
+  input.push(jQuery("#txtEmail"));
+  input.push(jQuery("#txtPhone"));
+  input.push(jQuery("#txtAddress"));
+  input.push(jQuery("#slcInvestment"));
+
+  saveInforNQ(
+    jQuery("#txtFullName").val(),
+    jQuery("#txtEmail").val(),
+    jQuery("#txtPhone").val(),
+    jQuery("#txtAddress").val(),
+    "TQ",
+    jQuery("#slcInvestment").val(),
+    input
+  );
+}
+
+//Set active link after click
+function activeList() {
+  var btnContainer = document.getElementById("main-menu");
+
+  var btns = btnContainer.getElementsByClassName("nav-link");
+
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+}
+
+//save db
+function saveInforNQ(fullName, email, phone, address, city, paymentFt, input) {
+  var valid = true;
+  input.forEach(function (_input) {
+    if (_input.val().length < 1 || _input.val() === "chưa chọn") {
+      valid = false;
+      _input.addClass("alert-danger");
+      return;
+    } else {
+      _input.removeClass("alert-danger");
+    }
+  });
+  if (!valid) {
+    alert("Vui lòng nhập đầy đủ thông tin.");
+    window.location.href = window.location.origin + "/nhuongquyen/";
+  } else {
+    jQuery.ajax({
+      // Hàm ajax
+      type: "post",
+      dataType: "json",
+      url: AJAX.url,
+      data: {
+        action: "saveInforNQ",
+        fullName: fullName,
+        email: email,
+        phone: phone,
+        paymentFt: paymentFt,
+        city: city,
+        address: address,
+      },
+      beforeSend: function () {},
+      success: function (res) {
+        console.log(res);
+        window.location.assign("https://tocotocotea.com/nhuongquyen-thank/");
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        alert("Lỗi kết nối, vui lòng kiểm tra lại kết nối mạng!");
+        //Làm gì đó khi có lỗi xảy ra
+        console.log("The following error occured: " + textStatus, errorThrown);
+      },
+    });
+  }
+}
+
+//Send data to Google form
+function postCustomerToGoogle(
+  fullName,
+  email,
+  phone,
+  address,
+  city,
+  paymentFt,
+  keepToken,
+  input
+) {
+  var valid = true;
+  input.forEach(function (_input) {
+    if (_input.val().length < 1 || _input.val() === "chưa chọn") {
+      valid = false;
+      _input.addClass("alert-danger");
+      return;
+    } else {
+      _input.removeClass("alert-danger");
+    }
+  });
+  if (!valid) {
+    alert("Vui lòng nhập đầy đủ thông tin.");
+    window.location.href = window.location.origin + "/nhuongquyen/";
+  } else {
+    jQuery.ajax({
+      // Hàm ajax
+      type: "post",
+      dataType: "json",
+      url: AJAX.url,
+      data: {
+        action: "saveFCInfor",
+        fullName: fullName,
+        email: email,
+        phone: phone,
+        city: city,
+        address: address,
+        paymentFt: paymentFt,
+        token: keepToken,
+      },
+      beforeSend: function () {},
+      success: function (res) {
+        console.log(res);
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        if (jqXHR.status == 200 || jqXHR.status == 0) {
+          window.location.assign("https://tocotocotea.com/nhuongquyen-thank/");
+        } else {
+          alert("Lỗi kết nối, vui lòng kiểm tra lại kết nối mạng!");
+          //Làm gì đó khi có lỗi xảy ra
+          console.log(
+            "The following error occured: " + textStatus,
+            errorThrown
+          );
+        }
+      },
+    });
+  }
+}
+
+var slideIndex = 1;
+
+function plusDivs(n) {
+  showDivs((slideIndex += n));
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("fcSlides");
+  if (n > x.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = x.length;
+  }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex - 1].style.display = "block";
+}

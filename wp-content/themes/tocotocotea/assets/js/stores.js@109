@@ -1,0 +1,84 @@
+var stores = {
+  init() {
+    var me = this;
+    jQuery(document).ready(() => {
+      me.initEvents();
+    });
+  },
+
+  initEvents() {
+    var me = this;
+    //Bind event to Element DOM
+    jQuery(document).on("change", "#mien", () => {
+      var mien = jQuery("#mien").val();
+      switch (mien) {
+        case "MB":
+          jQuery(".MB").fadeIn("slow");
+          jQuery(".MN").fadeOut("slow");
+          break;
+        case "MN":
+          jQuery(".MN").fadeIn("slow");
+          jQuery(".MB").fadeOut("slow");
+          break;
+        default:
+          jQuery(".MN").fadeIn("slow");
+          jQuery(".MB").fadeIn("slow");
+          break;
+      }
+    });
+
+    jQuery(document).on("keyup", "#search", () => {
+      var search = jQuery("#search").val().toLowerCase();
+      var mien = jQuery("#mien").val();
+      if (search.length > 0) {
+        jQuery("#resultsList")
+          .find(".itemStore")
+          .each(function () {
+            var data_region = jQuery(this).attr("data-region");
+            if (mien == data_region) {
+              var data = jQuery(this).attr("data-filter").toLowerCase();
+              var result = data.indexOf(search);
+              if (result != -1) {
+                jQuery(this).fadeIn("slow");
+              } else {
+                jQuery(this).fadeOut("slow");
+              }
+            }
+            if (mien == "ALL") {
+              var data = jQuery(this).attr("data-filter").toLowerCase();
+              var result = data.indexOf(search);
+              if (result != -1) {
+                jQuery(this).fadeIn("slow");
+              } else {
+                jQuery(this).fadeOut("slow");
+              }
+            }
+          });
+      } else {
+        jQuery("#resultsList")
+          .find(".itemStore")
+          .each(function () {
+            jQuery(this).show();
+          });
+
+          var mien = jQuery("#mien").val();
+          switch (mien) {
+            case "MB":
+              jQuery(".MB").fadeIn("slow");
+              jQuery(".MN").fadeOut("slow");
+              break;
+            case "MN":
+              jQuery(".MN").fadeIn("slow");
+              jQuery(".MB").fadeOut("slow");
+              break;
+            default:
+              jQuery(".MN").fadeIn("slow");
+              jQuery(".MB").fadeIn("slow");
+              break;
+          }
+      }
+    });
+  },
+};
+
+stores.init();

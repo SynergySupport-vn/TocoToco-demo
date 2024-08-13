@@ -1,0 +1,204 @@
+/* Common */
+button {
+    background: none;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+input, textarea, select {
+    border: 1px solid #ededed;
+    max-width: 100%;
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    height: 300px;
+    padding: 30px 0;
+    background: url(../images/breadcrumb_bg6.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 0px;
+}
+.breadcrumb .breadcrumb-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.breadcrumb .breadcrumb-content {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+}
+.breadcrumb .breadcrumb-content h2 {
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.94;
+    letter-spacing: 1.8px;
+    text-align: left;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Baloo", Helvetica, Arial, sans-serif !important;
+}
+
+/* Back button */
+.back {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background: #fcfcfc;
+}
+.back button {
+    font-size: 14px;
+    padding: 0;
+}
+.back button svg {
+    margin-right: 5px;
+}
+
+/* Job detail */
+.job-detail {
+    padding: 50px 0px;
+}
+.job-detail .job-content .job-head {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    display: block;
+    margin-bottom: 30px;
+    min-height: 58px;
+}
+.job-content .job-head h3 {
+    font-size: 28px;
+    letter-spacing: 1.4px;
+    line-height: normal;
+    font-weight: normal;
+}
+
+/* Job collection */
+.job-collection .job-share {
+    display: flex;
+}
+.job-share .fb-share-button {
+    margin-left: 10px;
+}
+.job-share .zalo-share-button {
+    height: 100% !important;
+    padding-top: 4px;
+    margin-left: 10px;
+}
+.job-collection .form-right {
+    border: 1px solid #ededed;
+    padding: 30px;
+    margin-top: 20px;
+}
+.form-right .timejob {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.timejob .content label {
+    opacity: 0.6;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: rgba(40, 40, 40, 0.6);
+}
+.form-right .icon {
+    width: 15%;
+    margin-top: 10px;
+}
+.form-right .content {
+    width: 85%;
+}
+.form-right .icon svg {
+    font-size: 20px;
+    color: #d3b673;
+}
+
+/* Submit form */
+.submit-form {
+    margin-bottom: 60px;
+}
+.submit-form .title {
+    font-size: 28px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #282828;
+    font-family: Muli, sans-serif;
+    text-transform: uppercase;
+}
+.submit-form .form-jobname {
+    padding: 50px;
+    border: solid 3px #d3b673;
+    background-color: #fcfcfc;
+}
+.submit-form .input-top, .submit-form .input-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.input-top label {
+    display: block;
+    margin-bottom: 10px;
+}
+.submit-form .form-jobname .form-group {
+    width: 50%;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.form-group input, .form-group1 input {
+    width: 100%;
+    border: solid 1px #d3b673;
+}
+.submit-form .form-jobname .form-group1 {
+    width: 50%;
+    margin-bottom: 30px;
+}
+@media (max-width: 480px) {
+    .form-jobname {
+        padding: 20px !important;
+    }
+    .form-jobname .input-top, .input-bottom {
+        display: block !important;
+    }
+    .form-jobname .form-group, .form-group1 {
+        width: 100% !important;
+    }
+    .form-jobname .title {
+        font-size: 15px;
+    }
+}
+.form-jobname .recruitment-code {
+    padding-bottom: 30px;
+}
+.form-jobname .btn-default {
+    width: 100%;
+    background: #d3b673;
+    color: #fff;
+    text-transform: uppercase;
+}
+.form-jobname .btn-default:hover {
+    background: #282828;
+}

@@ -1,0 +1,34 @@
+@font-face {
+    font-family: FontsFree-Net-Dasher-Deer;
+    src: url(FontsFree-Net-Dasher-Deer.ttf);
+}
+
+@font-face {
+    font-family: iCielSoupofJustice;
+    src: url(iCielSoupofJustice.otf);
+}
+
+@font-face {
+    font-family: iCielSoupofJusticeT;
+    src: url(iCielSoupofJustice.ttf);
+}
+
+@font-face {
+    font-family: VL_BoosterNextFY-Black;
+    src: url(VL_BoosterNextFY-Black.otf);
+}
+
+@font-face {
+    font-family: VLBOOSTERNEXTFY-THIN;
+    src: url(VLBOOSTERNEXTFY-THIN.OTF);
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url(Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(Poppins-Regular.ttf);
+}

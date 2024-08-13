@@ -1,0 +1,247 @@
+.category-top-banner {
+    height: 300px;
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #d3b673;
+    letter-spacing: 1.8px;
+    font-family: BalooExtra;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/breadcrumb_bg5.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+}
+
+.category-menu-title {
+    font-size: 28px;
+    letter-spacing: 1.4px;
+    color: #d3b673;
+    text-transform: uppercase;
+    font-family: BalooExtra;
+    margin-bottom: 32px;
+}
+
+.category-menu-content a, .category-menu-content a:hover {
+    color: #282828;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 2.56;
+    text-align: left;
+    color: #282828;
+    text-transform: uppercase;
+}
+
+.category-menu-content .menu-item {
+    height: 36px;
+    margin-bottom: 8px;
+}
+
+.category-menu-content .current-menu-item {
+    border-bottom: 2px solid #282828;
+    display: inline-block;
+}
+
+.category-main-title {
+    font-size: 28px;
+    letter-spacing: 1.4px;
+    margin-bottom: 32px;
+    color: #282828;
+    text-transform: uppercase;
+    font-family: BalooExtra;
+}
+
+.category-content {
+    display: flex;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+
+.category-side-bar {
+    width: 30%;
+}
+
+.category-main {
+    width: 70%;
+    padding-left: 30px;
+}
+
+.category-main-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-card {
+    width: calc(50% - 8px);
+    background-color: #f5f5f5;
+    margin-bottom: 40px;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none !important;
+}
+
+.post-card:hover {
+    box-shadow: 3.5px 6px 18px 0 rgb(0 0 0 / 10%);
+    background: white;
+}
+
+.post-card .feature-img {
+    width: 100%;
+}
+
+.post-card:nth-child(2n) {
+    margin-left: 8px;
+}
+
+.post-card:nth-child(2n + 1) {
+    margin-right: 8px;
+}
+
+.post-card .button-type-one {
+    font-size: 16px;
+    text-transform: none;
+    padding: 2px 16px;
+}
+
+.post-card-title {
+    color: #333333;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: block;
+    height: 50px;
+    font-family: Muli;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.post-card-content {
+    padding: 15px 15px 23px;
+}
+
+.post-card-excerpt {
+    font-family: Muli;
+    font-weight: 300;
+    color: #4d4d4d;
+    margin-bottom: 16px;
+}
+
+/* single page */
+
+.post-title {
+    font-family: BalooExtra;
+    font-size: 28px;
+    font-weight: 400;
+    color: #333333;
+    margin-bottom: 24px;
+}
+
+.post-date {
+    font-family: Muli;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 32pxs;
+}
+
+.category-banner-promotion {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.category-banner-promotion .banner-item {
+    width: 100%;
+    padding: 16px 0;
+}
+
+.post-tag, .post-tag:hover {
+    display: inline-block;
+    margin: 0px 18px 20px 0px;
+    padding: 5px 25px;
+    color: #282828;
+    font-size: 14px;
+    background: #fbeed1;
+    text-decoration: none;
+}
+
+.post-tag:hover {
+    color: #fff;
+    background: #282828;
+}
+
+.list-tags-title {
+    font-size: 28px;
+    letter-spacing: 1.4px;
+    color: #d3b673;
+    text-transform: uppercase;
+    font-family: BalooExtra;
+    margin-bottom: 32px;
+    margin-top: 50px;
+}
+
+.page-numbers {
+    padding: 4px 8px;
+    font-size: 18px;
+}
+
+.page-numbers.current {
+    background: #d3b673;
+    color: white;
+}
+
+.category-menu-content ul.menu {
+    list-style-type: none !important;
+    padding: 0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .category-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-side-bar {
+        width: 100%;
+    }
+
+    .category-side-bar .category-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-menu-title {
+        text-align: center;
+    }
+
+    .category-menu-content ul.menu {
+        text-align: center;
+    }
+
+    .category-banner-promotion {
+        display: none;
+    }
+
+    .list-tags {
+        display: none;
+    }
+
+    .category-main {
+        width: 100%;
+        padding: 0;
+    }
+
+    .category-main-title {
+        text-align: center;
+        margin-top: 32px;
+    }
+
+    .post-card {
+        width: 100%;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+}

@@ -1,0 +1,297 @@
+.ms-auto {
+    margin-left: auto!important;
+}
+
+body{
+    background-color: black !important;
+}
+
+.lpim-header{
+    height: 100vh;
+    background-image: url('../images/instant-milktea/bg_nav.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nav-item a{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'VL_BoosterNextFY-Black';
+}
+
+.nav-item a:hover{
+    color: #D2A552;
+}
+
+.nav-active{
+    border-bottom: 2px solid #D2A552 !important;
+}
+
+.lpim-intro-title{
+    color: #FFF;
+    font-family: 'FontsFree-Net-Dasher-Deer' ;
+    font-size: 48px;
+}
+
+.lpim-intro-area{
+    padding-top: 40vh;
+}
+
+.lpim-btn-order{
+    font-family: 'VL_BoosterNextFY-Black';
+    font-size: 18px;
+    color: #fff;
+    border: 2px solid #eb1566;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.lpim-btn-order:hover{
+    color: #fff;
+    background-color: #eb1566;
+    border: 2px solid #fff;
+}
+
+.lpim-btn-rm{
+    font-family: 'VL_BoosterNextFY-Black';
+    font-size: 18px;
+    color: #fff;
+    border: 2px solid #eb1566;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.lpim-btn-rm:hover{
+    color: #fff;
+    background-color: #eb1566;
+    border: 2px solid #fff;
+}
+
+/* .lpim-product-story{
+    margin-top: 80px;
+} */
+
+.lpim-product-story{
+    background-image: url('../images/instant-milktea/bg_nav1.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    min-height: 1081px;
+}
+
+.lpim-ps-item{
+    width: 100%;
+}
+
+.pink-font{
+    color: #eb1566;
+    font-family: 'iCielSoupofJustice';
+    font-size: 36px;
+}
+
+.lpim-ps-lbl{
+    font-size: 36px;
+}
+
+
+.lpim-ps-content li{
+    color: #fff;
+    font-family: 'VLBOOSTERNEXTFY-THIN';
+    font-size: 22px;
+}
+
+.lpim-ps-content li::marker {
+    color: #D2A552;
+    font-size: 15px;
+    font-family: 'Poppins-Regular';
+}
+
+.lpim-ps-lblmore{
+    text-align: center;
+    font-size: 48px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.lpim-ps-more{
+    color: #fff;
+    font-size: 24px;
+    font-family: 'VLBOOSTERNEXTFY-THIN';
+    text-align: center;
+}
+
+.lpim-ga-item{
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.lpim-product-news{
+    background-image: url('../images/instant-milktea/bg_nav3.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    min-height: 1244px;
+}
+
+.lpim-news-item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.lpim-pn-times{
+    color: #eb1566;
+    font-family: 'Poppins-SemiBold';
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.lpim-pn-title{
+    color: #fff;
+    font-family: 'VL_BoosterNextFY-Black';
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.lpim-pn-content{
+    color: #FFF;
+    font-size: 15px;
+    font-family: 'Poppins-Regular';
+    padding-bottom: 10px;
+}
+
+.lpim-po-lbl{
+    font-size: 48px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.lpim-product-order{
+    background-image: url('../images/instant-milktea/bg_nav4.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.lpim-pol-item{
+    width: 100%;
+    padding: 10px;
+}
+
+/* Mobile */
+.lpim-intro-area-mobile{
+    padding-top: 16vh;
+}
+
+.lpim-intro-title-mobile{
+    color: #FFF;
+    font-family: 'FontsFree-Net-Dasher-Deer' ;
+    font-size: 48px;
+    text-align: center;
+}
+
+.lpim-btn-order-mobile{
+    font-family: 'VL_BoosterNextFY-Black';
+    font-size: 18px;
+    color: #fff;
+    border: 2px solid #eb1566;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.lpim-btn-order-mobile:hover{
+    color: #fff;
+    background-color: #eb1566;
+    border: 2px solid #fff;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .mobile {display: block;}
+    
+    .pc {display: none;}
+    
+    .lpim-header{
+        background-image: url('../images/instant-milktea/bg_nav_mb.jpg');
+        /* height: 1226px; */
+        background-position: top;
+    }
+
+    .lpim-ps-item{
+        padding: 10px;
+    }
+
+    .lpim-btn-rm{
+        margin-left: 10px;
+    }
+
+    .lpim-news-item, .lpim-pn-times, .lpim-pn-title, .lpim-pn-content{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .mobile {display: block;}
+    .pc {display: none;}
+    .lpim-header{
+        background-image: url('../images/instant-milktea/bg_nav_mb.jpg');
+        /* height: 1226px; */
+        background-position: top;
+    }
+    .lpim-ps-item{
+        padding: 10px;
+    }
+
+    .lpim-btn-rm{
+        margin-left: 10px;
+    }
+
+    .lpim-news-item, .lpim-pn-times, .lpim-pn-title, .lpim-pn-content{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .mobile {display: block;}
+    .pc {display: none;}
+    .lpim-header{
+        background-image: url('../images/instant-milktea/bg_nav_mb.jpg');
+        /* height: 1436px; */
+        background-position: top;
+    }
+    .lpim-ps-item{
+        padding: 10px;
+    }
+
+    .lpim-btn-rm{
+        margin-left: 10px;
+    }
+
+    .lpim-news-item, .lpim-pn-times, .lpim-pn-title, .lpim-pn-content{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .mobile {display: none;}
+    .pc {display: block;}
+    .lpim-header{
+        background-image: url('../images/instant-milktea/bg_nav.jpg');
+    }
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .mobile {display: none;}
+    .pc {display: block;}
+    .lpim-header{
+        background-image: url('../images/instant-milktea/bg_nav.jpg');
+    }
+  }
